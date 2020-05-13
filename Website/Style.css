@@ -1,0 +1,86 @@
+/* Vragen moet dit hier in staan */
+
+    .st0{fill:#020403;}
+	.st1{fill:#0049C6;}
+	.st2{fill:#CC0000;}
+	.st3{fill:#650725;}
+	.st4{opacity:0.75;fill:#6A2500;}
+	.st5{fill:#08256B;}
+	.st6{fill:#126E15;}
+	.st7{fill:#FFD600;}
+	.st8{fill:#F3E200;}
+	.st9{fill:#277800;}
+	.st10{fill:#070908;}
+
+
+body {
+    background-color: black;
+}
+
+
+#Redshape {
+    animation-duration: 3s;
+    animation-name: fadeIn;
+    animation-iteration-count: infinite;
+
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+/* Onderzoeken hoe je objecten heen en weer kan laten bewegen */
+
+#YellowLine1{
+    animation-duration: 3s;
+    animation-name: ChangeColor;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes ChangeColor {
+    from {
+        fill: yellow;
+    }
+    
+    to{
+        fill: red;
+    }
+    
+}
+
+
+/* Vragen waarom die de ID's niet pakt */
+
+.st8{
+    animation-duration: 3s;
+    animation-name: OpacityOn;
+    animation-iteration-count: infinite;
+
+}
+
+
+/* Vragen waarom de fill alles bedekt en hierdoor geen animatie geeft... */
+
+@keyframes OpacityOn {
+    from {
+        opacity: 1;
+    }
+    
+    to{
+        opacity 0;
+    }
+    
+}
