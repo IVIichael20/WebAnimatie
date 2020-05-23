@@ -1,16 +1,48 @@
-/* Vragen moet dit hier in staan */
+.st0 {
+    fill: #020403;
+}
 
-    .st0{fill:#020403;}
-	.st1{fill:#0049C6;}
-	.st2{fill:#CC0000;}
-	.st3{fill:#650725;}
-	.st4{opacity:0.75;fill:#6A2500;}
-	.st5{fill:#08256B;}
-	.st6{fill:#126E15;}
-	.st7{fill:#FFD600;}
-	.st8{fill:#F3E200;}
-	.st9{fill:#277800;}
-	.st10{fill:#070908;}
+.st1 {
+    fill: #0049C6;
+}
+
+.st2 {
+    fill: #CC0000;
+}
+
+.st3 {
+    fill: #650725;
+}
+
+.st4 {
+    opacity: 0.75;
+    fill: #6A2500;
+}
+
+.st5 {
+    fill: #08256B;
+}
+
+.st6 {
+    fill: #126E15;
+}
+
+.st7 {
+    fill: #FFD600;
+}
+
+.st8 {
+    fill: #F3E200;
+}
+
+.st9 {
+    fill: #277800;
+}
+
+.st10 {
+    fill: #070908;
+}
+
 
 
 body {
@@ -18,15 +50,40 @@ body {
 }
 
 
-#Redshape {
-    animation-duration: 3s;
-    animation-name: fadeIn;
-    animation-iteration-count: infinite;
-
+.progress {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 2000;
+    font-size: 3em;
+    width: 50%;
+    text-align: center;
+    top: 40%;
+    position: absolute;
+    left: 25%;
+    opacity: 0;
 }
 
+.madeBy {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 1000;
+    font-size: 1em;
+    width: 50%;
+    text-align: center;
+    top: 48%;
+    position: absolute;
+    left: 25%;
+    opacity: 0;
+}
 
-@keyframes fadeIn {
+.progress,
+.madeBy {
+    animation-duration: 4s;
+    animation-name: begin;
+    animation-iteration-count: 1;
+}
+
+@keyframes begin {
     0% {
         opacity: 0;
     }
@@ -41,46 +98,66 @@ body {
 
 }
 
-/* Onderzoeken hoe je objecten heen en weer kan laten bewegen */
 
-#YellowLine1{
-    animation-duration: 3s;
-    animation-name: ChangeColor;
-    animation-iteration-count: infinite;
+
+
+.svg {
+    background-color: black;
+    opacity: 1;
+
+    animation: startUp 5s ease-in;
 
 }
 
-@keyframes ChangeColor {
-    from {
-        fill: yellow;
+@keyframes startUp {
+    0% {
+        opacity: 0;
     }
-    
-    to{
-        fill: red;
+
+    50% {
+        opacity: 0;
     }
-    
-}
 
-
-/* Vragen waarom die de ID's niet pakt */
-
-.st8{
-    animation-duration: 3s;
-    animation-name: OpacityOn;
-    animation-iteration-count: infinite;
-
-}
-
-
-/* Vragen waarom de fill alles bedekt en hierdoor geen animatie geeft... */
-
-@keyframes OpacityOn {
-    from {
+    100% {
         opacity: 1;
     }
-    
-    to{
-        opacity 0;
-    }
-    
+}
+
+.Y1,
+.Y2,
+.Y3,
+.Y4,
+.Y5,
+.Y6,
+.Y7 {
+    fill: #FFD600;
+
+}
+
+.YellowLinesUp:hover {
+    fill: green;
+    transform: translate(0px, 130px);
+
+}
+
+
+
+.yellowLineHover {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 1s;
+}
+
+
+.LinkerGeleBlok {
+    fill: #FFD600;
+}
+
+.LinkerGeleBlok:hover {
+    transform-origin: top left;
+    transform: rotate(20deg);
+
+
 }
