@@ -1,13 +1,40 @@
-var MyFunction;
-document.getElementById("YellowLine1").addEventListener("click", MyFunction);
+/* Wanneer je op de donkere rode vierkant klikt, krijg je een alert */
 
-function MyFunction() {
+var EasterEgg;
+document.querySelector(".DarkRedSquare").addEventListener("click", EasterEgg);
 
-    var classtoggleY1 = document.getElementById("YellowLine1");
-    classtoggleY1.classList.toggle("Y1");
+function EasterEgg() {
+    alert("Leuk geprobeerd, maar dit doet niks");
 };
 
 
+
+/* 
+Deze code zorgt voor een soort lens.
+Het toggled weer een class in CSS die uiteindelijk zorgt voor een animatie
+
+*/
+
+
+var BigCircle;
+document.querySelector(".DarkBlueShape").addEventListener("click", BigCircle);
+
+function BigCircle() {
+    var ZoomCircle = document.getElementById('BlueCircle');
+    ZoomCircle.classList.toggle('BlueCircleAdd');
+};
+
+
+
+/* 
+Wanneer je op de groene vierkant klikt, komen de gele vierkanten terug 
+Deze functie toggled een class op een element wanneer hierop geklikt wordt.
+
+Via CSS kan je deze class stylen, dus wanneer je klikt, komt er een andere stijl.
+In dit geval is het een animatie, namelijk dat de vierkanten stoppen met bewegen.
+
+En wanneer je opnieuw klikt, gaan ze weer bewegen.
+*/
 
 var DarkGreenShape;
 document.getElementById("Darkgreenshape").addEventListener("click", DarkGreenShape);
@@ -21,41 +48,22 @@ function DarkGreenShape() {
     var yellowshapeRToggle = document.querySelector(".YS2");
     yellowshapeRToggle.classList.toggle("RechterGeleBlok");
 
-}
+};
 
+/*
 
-var DarkGreenShape2;
-document.getElementById("DarkGreenshape").addEventListener("click", DarkGreenShape2);
-
-function DarkGreenShape2(){
-    
-    var MobileAnimation = document.getElementById("DarkGreenshape");
-    MobileAnimation.classList.toggle("MobileAnimation");
-}
-
-
-
-
-
-
-
-/* var addEvent = document.addEventListener ? function(target,type,action){
-    if(target){
-        target.addEventListener(type,action,false);
-    }                                                                                                                                                                                          
-} : function(target,type,action){
-    if(target){
-        target.attachEvent('on' + type,action,false);
-    }
-}
-
-addEvent(document,'keydown',function(e){
-    e = e || window.event;
-    var key = e.which || e.keyCode;
-    if(key===68){
-        document.getElementById("YellowLine1").style.display = "none";
-        console.log("Minkol");
-    }
-}); 
+Wanneer je op de spatiebalk klikt, dit is keycode 32, dan voegt er een class toe aan een element.
+Op deze class staat een animatie, die wordt dus uitgevoerd wanneer men op spatie klikt.
 
 */
+
+document.addEventListener('keydown', event => {
+    const key = event.wich || event.keyCode
+
+    if (key === 32) {
+        var ClipPath = document.querySelector('svg');
+        ClipPath.classList.toggle('ClipPath');
+        
+    };
+});
+

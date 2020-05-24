@@ -1,17 +1,17 @@
+/* Kleuren toedienen aan elementen waar niks mee gedaan wordt */
+
 .st0 {
     fill: #020403;
 }
 
-.st2 {
+.BigRedshape {
     fill: #CC0000;
 }
-
 
 .st4 {
     opacity: 0.75;
     fill: #6A2500;
 }
-
 
 .st6 {
     fill: #126E15;
@@ -33,11 +33,85 @@
     fill: #070908;
 }
 
+.st10:hover {
+    fill: white;
+    cursor: pointer;
+}
+
+
+/* Body */
 
 body {
     background-color: black;
 }
 
+
+.BlueCircleAdd {
+    background-color: #0049C6;
+    clip-path: circle(50%);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0;
+    z-index: -1;
+    
+    animation-name: Bigcircle;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes Bigcircle{
+    0%{
+        clip-path: circle(50%);
+        opacity: 1;
+        z-index: 0;
+    }
+    95%{
+        clip-path: circle(0%);
+        opacity: 0;
+        z-index: 0;
+    }
+    100%{
+        z-index: -1;
+    }
+    
+    
+}
+
+
+
+/* Gemaakt door Michael Varenhorst text dat langzaam in animeert*/
+
+.credits {
+    color: white;
+    writing-mode: vertical-rl;
+    position: fixed;
+    font-family: sans-serif;
+    font-size: 1em;
+    height: 100%;
+    letter-spacing: 1px;
+    text-align: center;
+
+    animation: Credits 10s ease-in;
+
+}
+
+@keyframes Credits {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100 {
+        opacity: 1;
+    }
+}
+
+
+/* Opmaak tekst begin*/
 
 .progress {
     color: white;
@@ -90,6 +164,25 @@ body {
 }
 
 
+.BigRedshape:hover {
+    animation: Vervaag 2s ease-in;
+    animation-iteration-count: infinite;
+    cursor: pointer
+}
+
+@keyframes Vervaag {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Blauwe kader die knippert */
+
+
 .DarkBlueGlow {
     fill: #0049C6;
 
@@ -113,35 +206,63 @@ body {
     }
 }
 
+/* Zoom in, rotate animatie [DRUK OP SPATIE] */
+
+.ClipPath {
+    animation-name: Zoom;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes Zoom {
+    0% {
+        clip-path: circle(80%);
+    }
+
+    50% {
+        clip-path: circle(0%);
+        transform: rotate(360deg);
+    }
+
+    100% {
+        clip-path: circle(80%);
+    }
+}
+
+/* Kunstwerk die bij opstarten langzaam tevoorschijn komt */
 
 .svgBig {
     background-color: black;
     opacity: 1;
 
-    animation: startUp 5s ease-in;
+    animation: startUp 7s ease-in;
 
 }
 
 @keyframes startUp {
     0% {
         opacity: 0;
+        clip-path: circle(0%);
     }
 
     50% {
         opacity: 0;
+        clip-path: circle(10%);
     }
 
     100% {
         opacity: 1;
+        clip-path: circle(100%);
     }
 }
+
+
+/* De verticale gele lijnen bovenaan het kunstwerk */
 
 .YellowLinesUp {
     fill: #FFD600;
 }
-
-
-
 
 
 .YellowLinesUp:hover {
@@ -151,27 +272,33 @@ body {
 
 }
 
+/* 
+Mijn best gedaan om de lijnen los aan te spreken via psuedo-classes, maar zonder resultaat.
+Daarentegen begrijp ik ze wel!
+
 .YellowLinesGroup:last-of-type {
     display: none;
 }
 
+.YellowLinesGroup:nth-of-type(n) {
+    display: none;
+}
 
+*/
+
+
+/* Animaties gele vierkanten */
 
 .YS1,
 .YS2 {
     fill: #FFD600;
 }
 
-
-
 .LinkerGeleBlok {
     animation-duration: 5s;
     animation-delay: 2s;
     animation-iteration-count: infinite;
     animation-name: YellowSquareL;
-
-
-
 }
 
 @keyframes YellowSquareL {
@@ -229,6 +356,8 @@ body {
     }
 }
 
+/* Rode vierkant */
+
 .DarkRedSquare {
     fill: #650725;
 
@@ -237,7 +366,30 @@ body {
 .DarkRedSquare:hover {
     fill: #7F2F4C;
     cursor: pointer;
+
+    animation-name: Ruitje;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes Ruitje {
+    0% {
+        clip-path: circle(100%);
+    }
+
+    50% {
+        clip-path: circle(40%);
+    }
+
+    100% {
+        clip-path: circle(100%);
+    }
+
+}
+
+
+
+/* Blauwe rechthoek / animatie */
 
 
 .DarkBlueShape {
@@ -270,7 +422,7 @@ body {
     }
 }
 
-
+/* Groene rechthoek / animatie */
 
 .DarkGreenSquare {
     fill: #126E15;
@@ -304,12 +456,14 @@ body {
 
     60% {
         fill: #0D490D;
-        clip-path: polygon(20% 0, 100% 50%, 50% 100%, 0 50%);
+        clip-path: circle(50%);
+        /*clip-path: polygon(20% 0, 100% 50%, 50% 100%, 0 50%);*/
     }
 
     80% {
         fill: #126E15;
-        clip-path: polygon(50% 0, 100% 50%, 20% 100%, 0 50%);
+        clip-path: circle(20%);
+        /*clip-path: polygon(50% 0, 100% 50%, 20% 100%, 0 50%);*/
     }
 
     100% {
@@ -318,6 +472,8 @@ body {
     }
 
 }
+
+/* Verstoppen van SVG van kleinere formaten */
 
 .smallsvg {
     display: none;
@@ -328,15 +484,13 @@ body {
 }
 
 
-
-
-
-
-
+/* Mediaqueries Middelformaat */
 
 
 @media only screen and (max-width: 1200px) and (min-width: 700px) {
 
+
+    /* Verstoppen van SVG van andere formaten */
     .svgBig {
         display: none;
     }
@@ -344,6 +498,8 @@ body {
     .smallsvg {
         display: none;
     }
+
+    /* Middel formaat zichtbaar maken */
 
     .mediumsvg {
         display: inline;
@@ -371,6 +527,7 @@ body {
 }
 
 
+/* Gele vierkanten animaties */
 
 .LinkerGeleBlok {
     animation-duration: 5s;
@@ -440,15 +597,13 @@ body {
 }
 
 
-
-
-
-
-
-
-
+/* Mediaqueries voor mobiel formaat */
 
 @media screen and (max-width: 700px) {
+
+
+    /* Verstoppen van SVG grote formaten */
+
     .svgBig {
         display: none;
     }
@@ -456,6 +611,8 @@ body {
     .mediumsvg {
         display: none;
     }
+
+    /*Zichtbaar maken van SVG */
 
     .smallsvg {
         display: inline;
@@ -478,21 +635,25 @@ body {
         }
     }
 
+
+
     .YellowLinesUp {
         fill: #FFD600;
     }
+
+    /* Kunstwerk infaden */
 
 
     .progress {
         color: white;
         font-family: sans-serif;
         font-weight: 2000;
-        font-size: 2.2em;
-        width: 60%;
+        font-size: 1.7em;
+        width: 70%;
         text-align: center;
         top: 40%;
         position: absolute;
-        left: 20%;
+        left: 15%;
         opacity: 0;
     }
 
@@ -500,15 +661,14 @@ body {
         color: white;
         font-family: sans-serif;
         font-weight: 1000;
-        font-size: 1em;
-        width: 50%;
+        font-size: 0.8em;
+        width: 60%;
         text-align: center;
         top: 46%;
         position: absolute;
-        left: 25%;
+        left: 20%;
         opacity: 0;
     }
-
 
     .DarkBlueGlow {
         fill: #0049C6;
@@ -532,6 +692,9 @@ body {
             fill: #0049C6;
         }
     }
+
+
+    /* Animaties gele vierkanten */
 
     .LinkerGeleBlok {
         animation-duration: 5s;
@@ -597,48 +760,3 @@ body {
             fill: #FFD600;
         }
     }
-    
-    
-    
-    .MobileAnimation {
-    cursor: pointer;
-
-    animation-name: DarkShapeGreen;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes DarkShapeGreen {
-    0% {
-        fill: #126E15;
-        clip-path: circle(100%);
-        border: 0px;
-    }
-
-    20% {
-        fill: #0D490D;
-        clip-path: circle(60%);
-    }
-
-    40% {
-        fill: #126E15;
-        clip-path: circle(40%);
-    }
-
-    60% {
-        fill: #0D490D;
-        clip-path: polygon(20% 0, 100% 50%, 50% 100%, 0 50%);
-    }
-
-    80% {
-        fill: #126E15;
-        clip-path: polygon(50% 0, 100% 50%, 20% 100%, 0 50%);
-    }
-
-    100% {
-        fill: #0D490D;
-        clip-path: circle(100%);
-    }
-
-}
-}
