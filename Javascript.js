@@ -12,10 +12,19 @@ function MyFunction() {
 var DarkGreenShape;
 document.getElementById("Darkgreenshape").addEventListener("click", DarkGreenShape);
 
-function DarkGreenShape(){
-    
-    console.log("Hello");
+
+function DarkGreenShape() {
+
+    var yellowshapeLToggle = document.querySelector(".YS1");
+    yellowshapeLToggle.classList.toggle("LinkerGeleBlok");
+
+    var yellowshapeRToggle = document.querySelector(".YS2");
+    yellowshapeRToggle.classList.toggle("RechterGeleBlok");
+
 }
+
+
+
 
 
 

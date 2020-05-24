@@ -142,7 +142,6 @@ body {
 
 .YellowLinesUp {
     fill: #FFD600;
-
 }
 
 
@@ -167,35 +166,43 @@ body {
 
 
 
-
+.YS1,
+.YS2 {
+    fill: #FFD600;
+}
 
 
 
 .LinkerGeleBlok {
-    fill: #FFD600;
-
     animation-duration: 5s;
-    animation-delay: 5s;
+    animation-delay: 1s;
     animation-iteration-count: infinite;
     animation-name: YellowSquareL;
+
+
 
 }
 
 @keyframes YellowSquareL {
     0% {
-        transform: translate(0px)
+        transform: translate(0px);
+        fill: #FFD600;
+
     }
 
     35% {
         transform: translate(-200px);
+        fill: #DB8F07;
     }
 
     70% {
         transform: translate(-100px);
+        fill: #DB8F07;
     }
 
     100% {
         transform: translate(0px);
+        fill: #FFD600;
     }
 }
 
@@ -203,27 +210,31 @@ body {
     fill: #FFD600;
 
     animation-duration: 5s;
-    animation-delay: 5s;
+    animation-delay: 1s;
     animation-iteration-count: infinite;
     animation-name: YellowSquareR;
 }
 
 @keyframes YellowSquareR {
     0% {
-        transform: translate(0px)
+        transform: translate(0px);
+        fill: #FFD600;
     }
 
     35% {
         transform: translate(400px);
+        fill: #DB8F07;
 
     }
 
     70% {
         transform: translate(200px);
+        fill: #DB8F07;
     }
 
     100% {
         transform: translate(0px);
+        fill: #FFD600;
     }
 }
 
@@ -248,8 +259,121 @@ body {
     .svgBig {
         display: none;
     }
-    
+
     .smallsvg {
         display: inline;
+
+        opacity: 1;
+
+        animation: startUp2 5s ease-in;
+
     }
+
+    @keyframes startUp2 {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .YellowLinesUp {
+        fill: #FFD600;
+    }
+
+}
+
+.DarkBlueGlow {
+    fill: #0049C6;
+
+    animation-delay: 2s;
+    animation: BlueShape1 ease-in;
+    animation-iteration-count: infinite;
+    animation-duration: 5.5s;
+}
+
+@keyframes BlueShape1 {
+    0% {
+        fill: #0049C6;
+    }
+
+    90% {
+        fill: #062047;
+    }
+
+    100% {
+        fill: #0049C6;
+    }
+}
+
+.LinkerGeleBlok {
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-name: YellowSquareL2;
+
+
+
+}
+
+@keyframes YellowSquareL2 {
+    0% {
+        transform: translate(0px);
+        fill: #FFD600;
+
+    }
+
+    35% {
+        transform: translate(-100px);
+        fill: #DB8F07;
+    }
+
+    70% {
+        transform: translate(-75px);
+        fill: #DB8F07;
+    }
+
+    100% {
+        transform: translate(0px);
+        fill: #FFD600;
+    }
+}
+
+.RechterGeleBlok {
+    fill: #FFD600;
+
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-name: YellowSquareR2;
+}
+
+@keyframes YellowSquareR2 {
+    0% {
+        transform: translate(0px);
+        fill: #FFD600;
+    }
+
+    35% {
+        transform: translate(150px);
+        fill: #DB8F07;
+
+    }
+
+    70% {
+        transform: translate(100px);
+        fill: #DB8F07;
+    }
+
+    100% {
+        transform: translate(0px);
+        fill: #FFD600;
+    }
+}
 }
