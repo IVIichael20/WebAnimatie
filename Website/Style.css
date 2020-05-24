@@ -2,26 +2,16 @@
     fill: #020403;
 }
 
-.st1 {
-    fill: #0049C6;
-}
-
 .st2 {
     fill: #CC0000;
 }
 
-.st3 {
-    fill: #650725;
-}
 
 .st4 {
     opacity: 0.75;
     fill: #6A2500;
 }
 
-.st5 {
-    fill: #08256B;
-}
 
 .st6 {
     fill: #126E15;
@@ -44,7 +34,6 @@
 }
 
 
-
 body {
     background-color: black;
 }
@@ -61,6 +50,7 @@ body {
     position: absolute;
     left: 25%;
     opacity: 0;
+    z-index: -100;
 }
 
 .madeBy {
@@ -74,6 +64,7 @@ body {
     position: absolute;
     left: 25%;
     opacity: 0;
+    z-index: -100;
 }
 
 .progress,
@@ -99,9 +90,31 @@ body {
 }
 
 
+.DarkBlueGlow {
+    fill: #0049C6;
+
+    animation-delay: 2s;
+    animation: BlueShape ease-in;
+    animation-iteration-count: infinite;
+    animation-duration: 5.5s;
+}
+
+@keyframes BlueShape {
+    0% {
+        fill: #0049C6;
+    }
+
+    90% {
+        fill: #062047;
+    }
+
+    100% {
+        fill: #0049C6;
+    }
+}
 
 
-.svg {
+.svgBig {
     background-color: black;
     opacity: 1;
 
@@ -123,41 +136,509 @@ body {
     }
 }
 
-.Y1,
-.Y2,
-.Y3,
-.Y4,
-.Y5,
-.Y6,
-.Y7 {
+.YellowLinesUp {
     fill: #FFD600;
-
 }
+
+
+
+
 
 .YellowLinesUp:hover {
     fill: green;
     transform: translate(0px, 130px);
+    cursor: pointer;
 
+}
+
+.YellowLinesGroup:last-of-type {
+    display: none;
 }
 
 
 
-.yellowLineHover {
-    display: inline-block;
-    vertical-align: middle;
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    transition-duration: 1s;
-}
-
-
-.LinkerGeleBlok {
+.YS1,
+.YS2 {
     fill: #FFD600;
 }
 
-.LinkerGeleBlok:hover {
-    transform-origin: top left;
-    transform: rotate(20deg);
 
 
+.LinkerGeleBlok {
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-name: YellowSquareL;
+
+
+
+}
+
+@keyframes YellowSquareL {
+    0% {
+        transform: translate(0px);
+        fill: #FFD600;
+
+    }
+
+    35% {
+        transform: translate(-200px);
+        fill: #DB8F07;
+    }
+
+    70% {
+        transform: translate(-100px);
+        fill: #DB8F07;
+    }
+
+    100% {
+        transform: translate(0px);
+        fill: #FFD600;
+    }
+}
+
+.RechterGeleBlok {
+    fill: #FFD600;
+
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-name: YellowSquareR;
+}
+
+@keyframes YellowSquareR {
+    0% {
+        transform: translate(0px);
+        fill: #FFD600;
+    }
+
+    35% {
+        transform: translate(400px);
+        fill: #DB8F07;
+
+    }
+
+    70% {
+        transform: translate(200px);
+        fill: #DB8F07;
+    }
+
+    100% {
+        transform: translate(0px);
+        fill: #FFD600;
+    }
+}
+
+.DarkRedSquare {
+    fill: #650725;
+
+}
+
+.DarkRedSquare:hover {
+    fill: #7F2F4C;
+    cursor: pointer;
+}
+
+
+.DarkBlueShape {
+    fill: #08256B;
+}
+
+.DarkBlueShape:hover {
+    cursor: pointer;
+
+    animation-name: DarkShapeBlue;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes DarkShapeBlue {
+    0% {
+        fill: #08256B;
+        clip-path: circle(100%);
+
+    }
+
+    50% {
+        fill: #3D66B7;
+        clip-path: circle(20%);
+    }
+
+    100% {
+        fill: #08256B;
+        clip-path: circle(60%);
+    }
+}
+
+
+
+.DarkGreenSquare {
+    fill: #126E15;
+
+}
+
+.DarkGreenSquare:hover {
+    cursor: pointer;
+
+    animation-name: DarkShapeGreen;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes DarkShapeGreen {
+    0% {
+        fill: #126E15;
+        clip-path: circle(100%);
+        border: 0px;
+    }
+
+    20% {
+        fill: #0D490D;
+        clip-path: circle(60%);
+    }
+
+    40% {
+        fill: #126E15;
+        clip-path: circle(40%);
+    }
+
+    60% {
+        fill: #0D490D;
+        clip-path: polygon(20% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+
+    80% {
+        fill: #126E15;
+        clip-path: polygon(50% 0, 100% 50%, 20% 100%, 0 50%);
+    }
+
+    100% {
+        fill: #0D490D;
+        clip-path: circle(100%);
+    }
+
+}
+
+.smallsvg {
+    display: none;
+}
+
+.mediumsvg {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+
+    .svgBig {
+        display: none;
+    }
+
+    .smallsvg {
+        display: none;
+    }
+
+    .mediumsvg {
+        display: inline;
+
+        opacity: 1;
+        animation: startUp2 5s ease-in;
+
+    }
+
+    @keyframes startUp2 {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+}
+
+
+
+.LinkerGeleBlok {
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-name: YellowSquareL;
+
+
+}
+
+@keyframes YellowSquareL {
+    0% {
+        transform: translate(0px);
+        fill: #FFD600;
+
+    }
+
+    35% {
+        transform: translate(-300px);
+        fill: #DB8F07;
+    }
+
+    70% {
+        transform: translate(-100px);
+        fill: #DB8F07;
+    }
+
+    100% {
+        transform: translate(0px);
+        fill: #FFD600;
+    }
+
+
+    .RechterGeleBlok {
+        fill: #FFD600;
+
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-name: YellowSquareR;
+    }
+
+    @keyframes YellowSquareR {
+        0% {
+            transform: translate(0px);
+            fill: #FFD600;
+        }
+
+        35% {
+            transform: translate(400px);
+            fill: #DB8F07;
+
+        }
+
+        70% {
+            transform: translate(200px);
+            fill: #DB8F07;
+        }
+
+        100% {
+            transform: translate(0px);
+            fill: #FFD600;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    .svgBig {
+        display: none;
+    }
+
+    .mediumsvg {
+        display: none;
+    }
+
+    .smallsvg {
+        display: inline;
+        opacity: 1;
+        animation: startUp3 5s ease-in;
+
+    }
+
+    @keyframes startUp3 {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .YellowLinesUp {
+        fill: #FFD600;
+    }
+
+
+    .progress {
+        color: white;
+        font-family: sans-serif;
+        font-weight: 2000;
+        font-size: 2.2em;
+        width: 60%;
+        text-align: center;
+        top: 40%;
+        position: absolute;
+        left: 20%;
+        opacity: 0;
+    }
+
+    .madeBy {
+        color: white;
+        font-family: sans-serif;
+        font-weight: 1000;
+        font-size: 1em;
+        width: 50%;
+        text-align: center;
+        top: 46%;
+        position: absolute;
+        left: 25%;
+        opacity: 0;
+    }
+
+
+    .DarkBlueGlow {
+        fill: #0049C6;
+
+        animation-delay: 2s;
+        animation: BlueShape3 ease-in;
+        animation-iteration-count: infinite;
+        animation-duration: 5.5s;
+    }
+
+    @keyframes BlueShape3 {
+        0% {
+            fill: #0049C6;
+        }
+
+        90% {
+            fill: #062047;
+        }
+
+        100% {
+            fill: #0049C6;
+        }
+    }
+
+    .LinkerGeleBlok {
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-name: YellowSquareL2;
+
+
+
+    }
+
+    @keyframes YellowSquareL2 {
+        0% {
+            transform: translate(0px);
+            fill: #FFD600;
+
+        }
+
+        35% {
+            transform: translate(-100px);
+            fill: #DB8F07;
+        }
+
+        70% {
+            transform: translate(-75px);
+            fill: #DB8F07;
+        }
+
+        100% {
+            transform: translate(0px);
+            fill: #FFD600;
+        }
+    }
+
+    .RechterGeleBlok {
+        fill: #FFD600;
+
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-name: YellowSquareR2;
+    }
+
+    @keyframes YellowSquareR2 {
+        0% {
+            transform: translate(0px);
+            fill: #FFD600;
+        }
+
+        35% {
+            transform: translate(150px);
+            fill: #DB8F07;
+
+        }
+
+        70% {
+            transform: translate(100px);
+            fill: #DB8F07;
+        }
+
+        100% {
+            transform: translate(0px);
+            fill: #FFD600;
+        }
+    }
+    
+    
+    
+    .MobileAnimation {
+    cursor: pointer;
+
+    animation-name: DarkShapeGreen;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes DarkShapeGreen {
+    0% {
+        fill: #126E15;
+        clip-path: circle(100%);
+        border: 0px;
+    }
+
+    20% {
+        fill: #0D490D;
+        clip-path: circle(60%);
+    }
+
+    40% {
+        fill: #126E15;
+        clip-path: circle(40%);
+    }
+
+    60% {
+        fill: #0D490D;
+        clip-path: polygon(20% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+
+    80% {
+        fill: #126E15;
+        clip-path: polygon(50% 0, 100% 50%, 20% 100%, 0 50%);
+    }
+
+    100% {
+        fill: #0D490D;
+        clip-path: circle(100%);
+    }
+
+}
 }

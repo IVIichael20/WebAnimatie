@@ -9,6 +9,30 @@ function MyFunction() {
 
 
 
+var DarkGreenShape;
+document.getElementById("Darkgreenshape").addEventListener("click", DarkGreenShape);
+
+
+function DarkGreenShape() {
+
+    var yellowshapeLToggle = document.querySelector(".YS1");
+    yellowshapeLToggle.classList.toggle("LinkerGeleBlok");
+
+    var yellowshapeRToggle = document.querySelector(".YS2");
+    yellowshapeRToggle.classList.toggle("RechterGeleBlok");
+
+}
+
+
+var DarkGreenShape2;
+document.getElementById("DarkGreenshape").addEventListener("click", DarkGreenShape2);
+
+function DarkGreenShape2(){
+    
+    var MobileAnimation = document.getElementById("DarkGreenshape");
+    MobileAnimation.classList.toggle("MobileAnimation");
+}
+
 
 
 
@@ -18,7 +42,7 @@ function MyFunction() {
 /* var addEvent = document.addEventListener ? function(target,type,action){
     if(target){
         target.addEventListener(type,action,false);
-    }
+    }                                                                                                                                                                                          
 } : function(target,type,action){
     if(target){
         target.attachEvent('on' + type,action,false);
