@@ -1,0 +1,255 @@
+.st0 {
+    fill: #020403;
+}
+
+.st2 {
+    fill: #CC0000;
+}
+
+.st3 {
+    fill: #650725;
+}
+
+.st4 {
+    opacity: 0.75;
+    fill: #6A2500;
+}
+
+.st5 {
+    fill: #08256B;
+}
+
+.st6 {
+    fill: #126E15;
+}
+
+.st7 {
+    fill: #FFD600;
+}
+
+.st8 {
+    fill: #F3E200;
+}
+
+.st9 {
+    fill: #277800;
+}
+
+.st10 {
+    fill: #070908;
+}
+
+
+body {
+    background-color: black;
+}
+
+
+.progress {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 2000;
+    font-size: 3em;
+    width: 50%;
+    text-align: center;
+    top: 40%;
+    position: absolute;
+    left: 25%;
+    opacity: 0;
+}
+
+.madeBy {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 1000;
+    font-size: 1em;
+    width: 50%;
+    text-align: center;
+    top: 48%;
+    position: absolute;
+    left: 25%;
+    opacity: 0;
+}
+
+.progress,
+.madeBy {
+    animation-duration: 4s;
+    animation-name: begin;
+    animation-iteration-count: 1;
+}
+
+@keyframes begin {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+.DarkBlueGlow {
+    fill: #0049C6;
+
+    animation-delay: 2s;
+    animation: BlueShape ease-in;
+    animation-iteration-count: infinite;
+    animation-duration: 5.5s;
+}
+
+@keyframes BlueShape {
+    0% {
+        fill: #0049C6;
+    }
+
+    90% {
+        fill: #062047;
+    }
+
+    100% {
+        fill: #0049C6;
+    }
+}
+
+
+.svgBig {
+    background-color: black;
+    opacity: 1;
+
+    animation: startUp 5s ease-in;
+
+}
+
+@keyframes startUp {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.YellowLinesUp {
+    fill: #FFD600;
+
+}
+
+
+
+
+
+.YellowLinesUp:hover {
+    fill: green;
+    transform: translate(0px, 130px);
+    cursor: pointer;
+
+}
+
+
+.yellowLineHover {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 1s;
+}
+
+
+
+
+
+
+
+.LinkerGeleBlok {
+    fill: #FFD600;
+
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-name: YellowSquareL;
+
+}
+
+@keyframes YellowSquareL {
+    0% {
+        transform: translate(0px)
+    }
+
+    35% {
+        transform: translate(-200px);
+    }
+
+    70% {
+        transform: translate(-100px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+.RechterGeleBlok {
+    fill: #FFD600;
+
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-name: YellowSquareR;
+}
+
+@keyframes YellowSquareR {
+    0% {
+        transform: translate(0px)
+    }
+
+    35% {
+        transform: translate(400px);
+
+    }
+
+    70% {
+        transform: translate(200px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+
+
+
+.DarkGreenSquare {
+    fill: #126E15;
+}
+
+.DarkGreenSquare:hover {
+    fill: #0D490D;
+    cursor: pointer;
+}
+
+.smallsvg {
+    display: none;
+}
+
+
+@media screen and (max-width: 700px) {
+    .svgBig {
+        display: none;
+    }
+    
+    .smallsvg {
+        display: inline;
+    }
+}
