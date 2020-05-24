@@ -11,7 +11,7 @@ function EasterEgg() {
 
 /* 
 Deze code zorgt voor een soort lens.
-Het toggled weer een class in CSS die uiteindelijk zorgt voor een animatie
+Het toggled een class in CSS die uiteindelijk zorgt voor een animatie.
 
 */
 
@@ -27,7 +27,7 @@ function BigCircle() {
 
 
 /* 
-Wanneer je op de groene vierkant klikt, komen de gele vierkanten terug 
+Wanneer je op de groene vierkant klikt, komen de gele vierkanten terug.
 Deze functie toggled een class op een element wanneer hierop geklikt wordt.
 
 Via CSS kan je deze class stylen, dus wanneer je klikt, komt er een andere stijl.

@@ -38,12 +38,20 @@
     cursor: pointer;
 }
 
-
 /* Body */
 
 body {
     background-color: black;
 }
+
+
+
+/* 
+
+Wanneer er op de blauwe rechthoek wordt geklikt, dit wordt gedaan door middel van een Javascript functie, speelt er een animatie af.
+Er komt een blauwe lens flare tevoorschijn, die weer langzaam verdwijnt. Deze actie kan je herhalen door opnieuw op het blauwe rechthoek te klikken
+
+*/
 
 
 .BlueCircleAdd {
@@ -54,33 +62,35 @@ body {
     position: fixed;
     opacity: 0;
     z-index: -1;
-    
+
     animation-name: Bigcircle;
     animation-duration: 2s;
     animation-iteration-count: 1;
 }
 
-@keyframes Bigcircle{
-    0%{
+@keyframes Bigcircle {
+    0% {
         clip-path: circle(50%);
         opacity: 1;
         z-index: 0;
     }
-    95%{
+
+    95% {
         clip-path: circle(0%);
         opacity: 0;
         z-index: 0;
     }
-    100%{
+
+    100% {
         z-index: -1;
     }
-    
-    
+
+
 }
 
 
 
-/* Gemaakt door Michael Varenhorst text dat langzaam in animeert*/
+/* Gmaakt door Michael Varenhorst text dat langzaam in animeert */
 
 .credits {
     color: white;
@@ -95,6 +105,8 @@ body {
     animation: Credits 10s ease-in;
 
 }
+
+/* Hier komt de tekst langzaam tevoorschijn en blijft het staan */
 
 @keyframes Credits {
     0% {
@@ -111,7 +123,7 @@ body {
 }
 
 
-/* Opmaak tekst begin*/
+/* Styling van de titel van het kunstwerk*/
 
 .progress {
     color: white;
@@ -141,6 +153,8 @@ body {
     z-index: -100;
 }
 
+/* Hier bepaal je hoelang deze tekst moet worden weergegeven. Na 4s verdwijnt de tekst weer en komt het kunstwerk tevoorschijn */
+
 .progress,
 .madeBy {
     animation-duration: 4s;
@@ -163,6 +177,7 @@ body {
 
 }
 
+/* Als je over het grote rode element hovert, zal de kleur langzaam wegtrekken */
 
 .BigRedshape:hover {
     animation: Vervaag 2s ease-in;
@@ -180,7 +195,7 @@ body {
     }
 }
 
-/* Blauwe kader die knippert */
+/* De blauw rand aan de buitenkant van het kunstwerk, zal ten alle tijden knippen van licht naar donker. */
 
 
 .DarkBlueGlow {
@@ -206,7 +221,7 @@ body {
     }
 }
 
-/* Zoom in, rotate animatie [DRUK OP SPATIE] */
+/* Zoom in, rotate animatie. Wanneer je op spatie klikt, zal het kunstwerk draaien en uiteindelijk verdwijnen. Deze komt langzaam weer tevoorschijn. */
 
 .ClipPath {
     animation-name: Zoom;
@@ -230,7 +245,7 @@ body {
     }
 }
 
-/* Kunstwerk die bij opstarten langzaam tevoorschijn komt */
+/* Kunstwerk die bij opstarten langzaam tevoorschijn komt. Dit gebeurt nadat de titel van het kunstwerk is verdwenen. */
 
 .svgBig {
     background-color: black;
@@ -272,22 +287,31 @@ body {
 
 }
 
-/* 
-Mijn best gedaan om de lijnen los aan te spreken via psuedo-classes, maar zonder resultaat.
-Daarentegen begrijp ik ze wel!
-
-.YellowLinesGroup:last-of-type {
-    display: none;
-}
-
-.YellowLinesGroup:nth-of-type(n) {
-    display: none;
-}
+/* Psuedoclasses op class .YellowLinesUp, op deze manier kan je uit deze class bepalen welke je wilt stijlen. Dit kan met nth-child() of met nth-of-type, etc.
 
 */
 
+.YellowLinesUp:nth-child(1):hover,
+.YellowLinesUp:nth-child(5):hover {
+    fill: red;
+}
 
-/* Animaties gele vierkanten */
+.YellowLinesUp:nth-child(2):hover,
+.YellowLinesUp:nth-child(6):hover {
+    fill: blue;
+}
+
+.YellowLinesUp:nth-child(3):hover,
+.YellowLinesUp:last-child:hover {
+    fill: purple;
+}
+
+.YellowLinesUp:nth-child(7):hover {
+    fill: white;
+}
+
+
+/* Animaties gele vierkanten, deze vierkanten zullen aan het begin van het kunstwerk heen en weer bewegen. */
 
 .YS1,
 .YS2 {
@@ -356,7 +380,7 @@ Daarentegen begrijp ik ze wel!
     }
 }
 
-/* Rode vierkant */
+/* Wanneer je over de rode vierkant hovert, zal er in dit element een animatie plaatsvinden. Het vierkant zal veranderen in een rondje en uiteindelijk weer terug */
 
 .DarkRedSquare {
     fill: #650725;
@@ -367,12 +391,12 @@ Daarentegen begrijp ik ze wel!
     fill: #7F2F4C;
     cursor: pointer;
 
-    animation-name: Ruitje;
+    animation-name: Cirkel;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
-@keyframes Ruitje {
+@keyframes Cirkel {
     0% {
         clip-path: circle(100%);
     }
@@ -389,7 +413,7 @@ Daarentegen begrijp ik ze wel!
 
 
 
-/* Blauwe rechthoek / animatie */
+/* Wanneer je over het blauwe rechthoek hovert, zal er een ronde animatie plaatsvinden. */
 
 
 .DarkBlueShape {
@@ -422,7 +446,7 @@ Daarentegen begrijp ik ze wel!
     }
 }
 
-/* Groene rechthoek / animatie */
+/* Wanneer je over het groene rechthoek hovert, zal er een rondje animatie spelen. Deze animatie duurt langer dan bij de blauwe rechthoek */
 
 .DarkGreenSquare {
     fill: #126E15;
@@ -527,7 +551,10 @@ Daarentegen begrijp ik ze wel!
 }
 
 
-/* Gele vierkanten animaties */
+/* 
+Bij het middelformaat kunnen de gele vierkanten minder ver bewegen, vandaar dat ik het hier opnieuw heb gestijlt.
+Dit zorgt ervoor dat de gele vierkanten niet uit het scherm verdwijnen.
+*/
 
 .LinkerGeleBlok {
     animation-duration: 5s;
@@ -641,7 +668,7 @@ Daarentegen begrijp ik ze wel!
         fill: #FFD600;
     }
 
-    /* Kunstwerk infaden */
+    /* De titel van het kunstwerk is hier opnieuw gestijld, aangezien deze te groot was.  */
 
 
     .progress {
@@ -669,6 +696,9 @@ Daarentegen begrijp ik ze wel!
         left: 20%;
         opacity: 0;
     }
+    
+    
+    /* De blauwe rand om het kunstwerk heen, knippert */
 
     .DarkBlueGlow {
         fill: #0049C6;
@@ -694,7 +724,7 @@ Daarentegen begrijp ik ze wel!
     }
 
 
-    /* Animaties gele vierkanten */
+    /* Op dit formaat moeten de gele vierkanten opnieuw minder ver bewegen, vandaar dat het hier opnieuw gestijld is. */
 
     .LinkerGeleBlok {
         animation-duration: 5s;
