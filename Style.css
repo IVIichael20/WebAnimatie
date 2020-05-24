@@ -254,17 +254,30 @@ body {
     display: none;
 }
 
+.mediumsvg {
+    display: none;
+}
 
-@media screen and (max-width: 700px) {
+
+
+
+
+
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+
     .svgBig {
         display: none;
     }
 
     .smallsvg {
+        display: none;
+    }
+
+    .mediumsvg {
         display: inline;
 
         opacity: 1;
-
         animation: startUp2 5s ease-in;
 
     }
@@ -283,46 +296,21 @@ body {
         }
     }
 
-    .YellowLinesUp {
-        fill: #FFD600;
-    }
 
 }
 
-.DarkBlueGlow {
-    fill: #0049C6;
 
-    animation-delay: 2s;
-    animation: BlueShape1 ease-in;
-    animation-iteration-count: infinite;
-    animation-duration: 5.5s;
-}
-
-@keyframes BlueShape1 {
-    0% {
-        fill: #0049C6;
-    }
-
-    90% {
-        fill: #062047;
-    }
-
-    100% {
-        fill: #0049C6;
-    }
-}
 
 .LinkerGeleBlok {
     animation-duration: 5s;
     animation-delay: 1s;
     animation-iteration-count: infinite;
-    animation-name: YellowSquareL2;
-
+    animation-name: YellowSquareL;
 
 
 }
 
-@keyframes YellowSquareL2 {
+@keyframes YellowSquareL {
     0% {
         transform: translate(0px);
         fill: #FFD600;
@@ -330,50 +318,210 @@ body {
     }
 
     35% {
+        transform: translate(-300px);
+        fill: #DB8F07;
+    }
+
+    70% {
         transform: translate(-100px);
         fill: #DB8F07;
     }
 
-    70% {
-        transform: translate(-75px);
-        fill: #DB8F07;
-    }
-
     100% {
         transform: translate(0px);
         fill: #FFD600;
     }
+
+
+    .RechterGeleBlok {
+        fill: #FFD600;
+
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-name: YellowSquareR;
+    }
+
+    @keyframes YellowSquareR {
+        0% {
+            transform: translate(0px);
+            fill: #FFD600;
+        }
+
+        35% {
+            transform: translate(400px);
+            fill: #DB8F07;
+
+        }
+
+        70% {
+            transform: translate(200px);
+            fill: #DB8F07;
+        }
+
+        100% {
+            transform: translate(0px);
+            fill: #FFD600;
+        }
+    }
 }
 
-.RechterGeleBlok {
-    fill: #FFD600;
 
-    animation-duration: 5s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    animation-name: YellowSquareR2;
-}
 
-@keyframes YellowSquareR2 {
-    0% {
-        transform: translate(0px);
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    .svgBig {
+        display: none;
+    }
+
+    .mediumsvg {
+        display: none;
+    }
+
+    .smallsvg {
+        display: inline;
+        opacity: 1;
+        animation: startUp3 5s ease-in;
+
+    }
+
+    @keyframes startUp3 {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .YellowLinesUp {
         fill: #FFD600;
     }
 
-    35% {
-        transform: translate(150px);
-        fill: #DB8F07;
+
+    .progress {
+        color: white;
+        font-family: sans-serif;
+        font-weight: 2000;
+        font-size: 2.2em;
+        width: 60%;
+        text-align: center;
+        top: 40%;
+        position: absolute;
+        left: 20%;
+        opacity: 0;
+    }
+
+    .madeBy {
+        color: white;
+        font-family: sans-serif;
+        font-weight: 1000;
+        font-size: 1em;
+        width: 50%;
+        text-align: center;
+        top: 46%;
+        position: absolute;
+        left: 25%;
+        opacity: 0;
+    }
+
+
+    .DarkBlueGlow {
+        fill: #0049C6;
+
+        animation-delay: 2s;
+        animation: BlueShape3 ease-in;
+        animation-iteration-count: infinite;
+        animation-duration: 5.5s;
+    }
+
+    @keyframes BlueShape3 {
+        0% {
+            fill: #0049C6;
+        }
+
+        90% {
+            fill: #062047;
+        }
+
+        100% {
+            fill: #0049C6;
+        }
+    }
+
+    .LinkerGeleBlok {
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-name: YellowSquareL2;
+
+
 
     }
 
-    70% {
-        transform: translate(100px);
-        fill: #DB8F07;
+    @keyframes YellowSquareL2 {
+        0% {
+            transform: translate(0px);
+            fill: #FFD600;
+
+        }
+
+        35% {
+            transform: translate(-100px);
+            fill: #DB8F07;
+        }
+
+        70% {
+            transform: translate(-75px);
+            fill: #DB8F07;
+        }
+
+        100% {
+            transform: translate(0px);
+            fill: #FFD600;
+        }
     }
 
-    100% {
-        transform: translate(0px);
+    .RechterGeleBlok {
         fill: #FFD600;
+
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-name: YellowSquareR2;
     }
-}
+
+    @keyframes YellowSquareR2 {
+        0% {
+            transform: translate(0px);
+            fill: #FFD600;
+        }
+
+        35% {
+            transform: translate(150px);
+            fill: #DB8F07;
+
+        }
+
+        70% {
+            transform: translate(100px);
+            fill: #DB8F07;
+        }
+
+        100% {
+            transform: translate(0px);
+            fill: #FFD600;
+        }
+    }
 }
