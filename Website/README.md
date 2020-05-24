@@ -6,8 +6,13 @@ https://designarchives.aiga.org/#/entries/%2Bcollections%3A%22B.%20Martin%20Pede
 
 Progress, 1973.
 
+Ik heb dit kunstwerk gekozen omdat deze mij het meeste aansprak van alle andere kunstwerken. 
+Een kunstwerk met afbeeldingen vielen voor mij al af, aangezien ik dit niet voor me zag om te gaan animeren.
+Daarom heb ik gekozen voor een kunstwerken met strakke lijnen en waarmee je genoeg kan doen.
 
-Toen ik dit kunstwerk zag kreeg ik meteen al allerlei ideen van wat ik hiermee wilde gaan doen. Zo kwamen de volgende ideeen naar boven:
+Toen ik dit kunstwerk zag kreeg ik meteen al allerlei ideen van wat ik hiermee wilde gaan doen. 
+
+Zo kwamen de volgende ideeen naar boven:
 
     - Jukebox
     - Gereedschap
